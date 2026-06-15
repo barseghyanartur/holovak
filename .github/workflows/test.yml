@@ -1,0 +1,38 @@
+name: Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Test on macOS
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ macos-15, macos-14 ]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ffmpeg
+        run: brew install ffmpeg
+
+      - name: Build (smoke-check)
+        run: |
+          xcodebuild build \
+            -project ClipCut.xcodeproj \
+            -scheme ClipCut \
+            -destination 'platform=macOS' \
+            CODE_SIGN_IDENTITY="-"
+
+      - name: Run unit tests
+        run: |
+          xcodebuild test \
+            -project ClipCut.xcodeproj \
+            -scheme ClipCut \
+            -destination 'platform=macOS' \
+            -only-testing ClipCutTests \
+            CODE_SIGN_IDENTITY="-"
