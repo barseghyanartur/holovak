@@ -20,6 +20,7 @@
 #   make checksum     Print + save SHA-256 → Releases/dist/
 #   make release      Full pipeline (archive → export → dmg → zip → checksum)
 #   make publish      Tag, push, and create GitHub release with DMG asset
+#   make upload       Create GitHub release for existing tag, upload DMG
 #   make version      Print current MARKETING_VERSION
 #   make bump V=0.2.0 Set a new version in the project file
 #   make clean        Remove all generated artefacts
@@ -76,7 +77,7 @@ endif
 # Phony targets
 # ---------------------------------------------------------------------------
 .PHONY: all build test test-unit archive export dmg checksum tap release \
-        publish version bump open clean help
+        publish upload version bump open clean help
 
 all: help
 
@@ -231,6 +232,17 @@ publish:
 	  (echo "No .dmg found at $(DMG_PATH). Run 'make release' first."; exit 1)
 	@git tag "$(VERSION)"
 	@git push origin $(VERSION)
+	gh release create "$(VERSION)" "$(DMG_PATH)" \
+	  --title "$(VERSION)" \
+	  --latest
+	@echo "→ GitHub release created: $(VERSION)"
+
+## upload: Create a GitHub release for an existing tag and upload the DMG asset
+upload:
+	@test -f "$(DMG_PATH)" || \
+	  (echo "No .dmg found at $(DMG_PATH). Run 'make release' first."; exit 1)
+	@gh release view "$(VERSION)" >/dev/null 2>&1 && \
+	  { echo "Release $(VERSION) already exists."; exit 1; }
 	gh release create "$(VERSION)" "$(DMG_PATH)" \
 	  --title "$(VERSION)" \
 	  --latest
