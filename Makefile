@@ -1,5 +1,5 @@
 # =============================================================================
-# Makefile — ClipCut
+# Makefile — Holovak
 # =============================================================================
 # All tools (xcodebuild, hdiutil, ditto, codesign, shasum) ship with macOS and
 # Xcode Command Line Tools. No third-party utilities are required.
@@ -28,9 +28,9 @@
 # ---------------------------------------------------------------------------
 # Project identity
 # ---------------------------------------------------------------------------
-PROJECT  := ClipCut.xcodeproj
-SCHEME   := ClipCut
-APP_NAME := ClipCut
+PROJECT  := Holovak.xcodeproj
+SCHEME   := Holovak
+APP_NAME := Holovak
 
 # macOS destination string used by every xcodebuild invocation
 DEST := platform=macOS
@@ -179,14 +179,14 @@ tap: checksum
 	@mkdir -p "$(RELEASES_DIR)/tap"
 	@SHA256=$$(awk '{print $$1}' "$(SHASUM_PATH)") && \
 	( \
-	  echo 'cask "clipcut" do' ; \
+	  echo 'cask "holovak" do' ; \
 	  echo "  version \"$(VERSION)\"" ; \
 	  echo "  sha256 \"$$SHA256\"" ; \
 	  echo '' ; \
-	  echo "  url \"https://github.com/barseghyanartur/clipcut/releases/download/$(VERSION)/ClipCut.dmg\"" ; \
-	  echo '  name "ClipCut"' ; \
+	  echo "  url \"https://github.com/barseghyanartur/holovak/releases/download/$(VERSION)/Holovak.dmg\"" ; \
+	  echo '  name "Holovak"' ; \
 	  echo '  desc "Simple video segment editor for macOS."' ; \
-	  echo '  homepage "https://github.com/barseghyanartur/clipcut"' ; \
+	  echo '  homepage "https://github.com/barseghyanartur/holovak"' ; \
 	  echo '' ; \
 	  echo '  livecheck do' ; \
 	  echo '    url :url' ; \
@@ -195,11 +195,11 @@ tap: checksum
 	  echo '' ; \
 	  echo '  depends_on formula: "ffmpeg"' ; \
 	  echo '' ; \
-	  echo '  app "ClipCut.app"' ; \
+	  echo '  app "Holovak.app"' ; \
 	  echo 'end' \
-	) > "$(RELEASES_DIR)/tap/clipcut.rb" && \
-	sed "s/clipcut\" do/clipcut@$(VERSION)\" do/" "$(RELEASES_DIR)/tap/clipcut.rb" \
-	  > "$(RELEASES_DIR)/tap/clipcut@$(VERSION).rb" && \
+	) > "$(RELEASES_DIR)/tap/holovak.rb" && \
+	sed "s/holovak\" do/holovak@$(VERSION)\" do/" "$(RELEASES_DIR)/tap/holovak.rb" \
+	  > "$(RELEASES_DIR)/tap/holovak@$(VERSION).rb" && \
 	echo "→ Tap files: $(RELEASES_DIR)/tap/"
 
 ## release: Full pipeline — archive → export → dmg → checksum → tap
@@ -212,14 +212,14 @@ release: archive export dmg checksum tap
 	@echo "║  App      : $(APP_PATH)"
 	@echo "║  DMG      : $(DMG_PATH)"
 	@echo "║  SHA-256  : $$(awk '{print $$1}' $(SHASUM_PATH))"
-	@echo "║  Tap      : $(RELEASES_DIR)/tap/clipcut.rb"
-	@echo "║             $(RELEASES_DIR)/tap/clipcut@$(VERSION).rb"
+	@echo "║  Tap      : $(RELEASES_DIR)/tap/holovak.rb"
+	@echo "║             $(RELEASES_DIR)/tap/holovak@$(VERSION).rb"
 	@echo "╠══════════════════════════════════════════════════════╣"
 	@echo "║  Next steps:"
 	@echo "║    1. git tag $(VERSION) && git push --tags"
-	@echo "║    2. Upload ClipCut.dmg to the GitHub release"
+	@echo "║    2. Upload Holovak.dmg to the GitHub release"
 	@echo "║    3. Copy tap files to your Homebrew tap repo:"
-	@echo "║       cp Releases/tap/*.rb /path/to/homebrew-clip-cut-tap/Casks/"
+	@echo "║       cp Releases/tap/*.rb /path/to/homebrew-holovak-tap/Casks/"
 	@echo "╚══════════════════════════════════════════════════════╝"
 
 # ---------------------------------------------------------------------------

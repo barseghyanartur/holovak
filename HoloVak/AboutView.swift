@@ -26,7 +26,7 @@ struct AboutView: View {
                 .resizable()
                 .frame(width: 64, height: 64)
 
-            Text("ClipCut")
+            Text("Holovak")
                 .font(.title2.weight(.semibold))
 
             if let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,
@@ -122,7 +122,7 @@ func showAboutWindow() {
         backing: .buffered,
         defer: false
     )
-    window.title = "About ClipCut"
+    window.title = "About Holovak"
     window.center()
     window.isReleasedWhenClosed = false
     window.contentView = NSHostingView(rootView: AboutView())

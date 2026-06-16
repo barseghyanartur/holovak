@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct ClipCutApp: App {
+struct HolovakApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -17,7 +17,7 @@ struct ClipCutApp: App {
                 .keyboardShortcut("r", modifiers: [.command, .option])
             }
             CommandGroup(replacing: .appInfo) {
-                Button("About ClipCut") {
+                Button("About Holovak") {
                     showAboutWindow()
                 }
             }

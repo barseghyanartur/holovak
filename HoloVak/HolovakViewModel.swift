@@ -15,7 +15,7 @@ enum ExportState: Equatable {
 }
 
 @MainActor
-final class ClipCutViewModel: ObservableObject {
+final class HolovakViewModel: ObservableObject {
 
     private let settings = AppSettings.shared
     private var cancellables = Set<AnyCancellable>()

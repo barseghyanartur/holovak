@@ -3,7 +3,7 @@ import UniformTypeIdentifiers
 import AVKit
 
 struct ContentView: View {
-    @StateObject private var vm = ClipCutViewModel()
+    @StateObject private var vm = HolovakViewModel()
     @StateObject private var settings = AppSettings.shared
     @StateObject private var previewPlayer = PreviewPlayer()
     @State private var isDropTargeted = false
@@ -65,7 +65,7 @@ struct ContentView: View {
 
     private var toolbar: some View {
         HStack(spacing: 12) {
-            Text("ClipCut")
+            Text("Holovak")
                 .font(.system(size: 13, weight: .semibold, design: .monospaced))
 
             Spacer()

@@ -1,10 +1,10 @@
-ClipCut
+Holovak
 =======
 
-.. image:: https://github.com/barseghyanartur/clipcut/actions/workflows/test.yml/badge.svg?branch=main
-   :target: https://github.com/barseghyanartur/clipcut/actions
+.. image:: https://github.com/barseghyanartur/holovak/actions/workflows/test.yml/badge.svg?branch=main
+   :target: https://github.com/barseghyanartur/holovak/actions
 .. image:: https://img.shields.io/badge/license-MIT-blue.svg
-   :target: https://github.com/barseghyanartur/clipcut/#licence
+   :target: https://github.com/barseghyanartur/holovak/#licence
 
 A minimal macOS app for trimming video files by specifying keep-segments.
 Drop a file, define your time ranges, export. Powered by ``ffmpeg``.
@@ -31,16 +31,16 @@ Build from source
 
 ::
 
-    git clone https://github.com/barseghyanartur/clipcut.git
-    cd clipcut
+    git clone https://github.com/barseghyanartur/holovak.git
+    cd holovak
     make build
     make open   # open in Xcode, then ⌘R to run
 
 Release (DMG)
 ~~~~~~~~~~~~~
 
-Go to `Releases <https://github.com/barseghyanartur/clipcut/releases/>`_ and
-download the latest ``ClipCut.dmg``. Open it and drag ``ClipCut`` into
+Go to `Releases <https://github.com/barseghyanartur/holovak/releases/>`_ and
+download the latest ``Holovak.dmg``. Open it and drag ``Holovak`` into
 ``Applications``.
 
 Usage

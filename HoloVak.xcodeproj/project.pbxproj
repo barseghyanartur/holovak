@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A101 /* ClipCutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001 /* ClipCutApp.swift */; };
+		A101 /* HolovakApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A001 /* HolovakApp.swift */; };
 		A102 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A002 /* ContentView.swift */; };
 		A103 /* Segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A003 /* Segment.swift */; };
 		A104 /* FFmpegRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A004 /* FFmpegRunner.swift */; };
-		A105 /* ClipCutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005 /* ClipCutViewModel.swift */; };
+		A105 /* HolovakViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A005 /* HolovakViewModel.swift */; };
 		A106 /* SegmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A006 /* SegmentRow.swift */; };
 		A107 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A007 /* Assets.xcassets */; };
 		A109 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009 /* Settings.swift */; };
 		A110 /* PreviewPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A010 /* PreviewPlayer.swift */; };
 		A111 /* PreviewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A011 /* PreviewWindow.swift */; };
 		A112 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A012 /* AboutView.swift */; };
-		A201 /* ClipCutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A201R /* ClipCutTests.swift */; };
-		A301 /* ClipCutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A301R /* ClipCutUITests.swift */; };
+		A201 /* HolovakTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A201R /* HolovakTests.swift */; };
+		A301 /* HolovakUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A301R /* HolovakUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A000 /* ClipCut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClipCut.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A001 /* ClipCutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipCutApp.swift; sourceTree = "<group>"; };
+		A000 /* Holovak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Holovak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A001 /* HolovakApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolovakApp.swift; sourceTree = "<group>"; };
 		A002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A003 /* Segment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segment.swift; sourceTree = "<group>"; };
 		A004 /* FFmpegRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FFmpegRunner.swift; sourceTree = "<group>"; };
-		A005 /* ClipCutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipCutViewModel.swift; sourceTree = "<group>"; };
+		A005 /* HolovakViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolovakViewModel.swift; sourceTree = "<group>"; };
 		A006 /* SegmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentRow.swift; sourceTree = "<group>"; };
 		A009 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		A010 /* PreviewPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewPlayer.swift; sourceTree = "<group>"; };
@@ -36,10 +36,10 @@
 		A012 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		A007 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A200 /* ClipCutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipCutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A201R /* ClipCutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipCutTests.swift; sourceTree = "<group>"; };
-		A300 /* ClipCutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClipCutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A301R /* ClipCutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipCutUITests.swift; sourceTree = "<group>"; };
+		A200 /* HolovakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HolovakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A201R /* HolovakTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolovakTests.swift; sourceTree = "<group>"; };
+		A300 /* HolovakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HolovakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A301R /* HolovakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolovakUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,21 +67,21 @@
 		C000 /* root */ = {
 			isa = PBXGroup;
 			children = (
-				C001 /* ClipCut */,
-				C002 /* ClipCutTests */,
-				C003 /* ClipCutUITests */,
+				C001 /* Holovak */,
+				C002 /* HolovakTests */,
+				C003 /* HolovakUITests */,
 				C004 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C001 /* ClipCut */ = {
+		C001 /* Holovak */ = {
 			isa = PBXGroup;
 			children = (
-				A001 /* ClipCutApp.swift */,
+				A001 /* HolovakApp.swift */,
 				A002 /* ContentView.swift */,
 				A003 /* Segment.swift */,
 				A004 /* FFmpegRunner.swift */,
-				A005 /* ClipCutViewModel.swift */,
+				A005 /* HolovakViewModel.swift */,
 				A006 /* SegmentRow.swift */,
 				A009 /* Settings.swift */,
 				A010 /* PreviewPlayer.swift */,
@@ -90,31 +90,31 @@
 				A007 /* Assets.xcassets */,
 				A008 /* Info.plist */,
 			);
-			path = ClipCut;
+			path = Holovak;
 			sourceTree = "<group>";
 		};
-		C002 /* ClipCutTests */ = {
+		C002 /* HolovakTests */ = {
 			isa = PBXGroup;
 			children = (
-				A201R /* ClipCutTests.swift */,
+				A201R /* HolovakTests.swift */,
 			);
-			path = ClipCutTests;
+			path = HolovakTests;
 			sourceTree = "<group>";
 		};
-		C003 /* ClipCutUITests */ = {
+		C003 /* HolovakUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A301R /* ClipCutUITests.swift */,
+				A301R /* HolovakUITests.swift */,
 			);
-			path = ClipCutUITests;
+			path = HolovakUITests;
 			sourceTree = "<group>";
 		};
 		C004 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A000 /* ClipCut.app */,
-				A200 /* ClipCutTests.xctest */,
-				A300 /* ClipCutUITests.xctest */,
+				A000 /* Holovak.app */,
+				A200 /* HolovakTests.xctest */,
+				A300 /* HolovakUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,9 +122,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		T001 /* ClipCut */ = {
+		T001 /* Holovak */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = XC01 /* Build configuration list for PBXNativeTarget "ClipCut" */;
+			buildConfigurationList = XC01 /* Build configuration list for PBXNativeTarget "Holovak" */;
 			buildPhases = (
 				P001 /* Sources */,
 				B001 /* Frameworks */,
@@ -132,14 +132,14 @@
 			);
 			buildRules = ();
 			dependencies = ();
-			name = ClipCut;
-			productName = ClipCut;
-			productReference = A000 /* ClipCut.app */;
+			name = Holovak;
+			productName = Holovak;
+			productReference = A000 /* Holovak.app */;
 			productType = "com.apple.product-type.application";
 		};
-		T002 /* ClipCutTests */ = {
+		T002 /* HolovakTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = XC02 /* Build configuration list for PBXNativeTarget "ClipCutTests" */;
+			buildConfigurationList = XC02 /* Build configuration list for PBXNativeTarget "HolovakTests" */;
 			buildPhases = (
 				P002 /* Sources */,
 				B002 /* Frameworks */,
@@ -148,14 +148,14 @@
 			dependencies = (
 				DEP01 /* PBXTargetDependency */,
 			);
-			name = ClipCutTests;
-			productName = ClipCutTests;
-			productReference = A200 /* ClipCutTests.xctest */;
+			name = HolovakTests;
+			productName = HolovakTests;
+			productReference = A200 /* HolovakTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		T003 /* ClipCutUITests */ = {
+		T003 /* HolovakUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = XC03 /* Build configuration list for PBXNativeTarget "ClipCutUITests" */;
+			buildConfigurationList = XC03 /* Build configuration list for PBXNativeTarget "HolovakUITests" */;
 			buildPhases = (
 				P004 /* Sources */,
 				B003 /* Frameworks */,
@@ -164,9 +164,9 @@
 			dependencies = (
 				DEP02 /* PBXTargetDependency */,
 			);
-			name = ClipCutUITests;
-			productName = ClipCutUITests;
-			productReference = A300 /* ClipCutUITests.xctest */;
+			name = HolovakUITests;
+			productName = HolovakUITests;
+			productReference = A300 /* HolovakUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +192,7 @@
 					};
 				};
 			};
-			buildConfigurationList = XC00 /* Build configuration list for PBXProject "ClipCut" */;
+			buildConfigurationList = XC00 /* Build configuration list for PBXProject "Holovak" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -205,9 +205,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				T001 /* ClipCut */,
-				T002 /* ClipCutTests */,
-				T003 /* ClipCutUITests */,
+				T001 /* Holovak */,
+				T002 /* HolovakTests */,
+				T003 /* HolovakUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,11 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A101 /* ClipCutApp.swift in Sources */,
+				A101 /* HolovakApp.swift in Sources */,
 				A102 /* ContentView.swift in Sources */,
 				A103 /* Segment.swift in Sources */,
 				A104 /* FFmpegRunner.swift in Sources */,
-				A105 /* ClipCutViewModel.swift in Sources */,
+				A105 /* HolovakViewModel.swift in Sources */,
 				A106 /* SegmentRow.swift in Sources */,
 				A109 /* Settings.swift in Sources */,
 				A110 /* PreviewPlayer.swift in Sources */,
@@ -245,7 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A201 /* ClipCutTests.swift in Sources */,
+				A201 /* HolovakTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A301 /* ClipCutUITests.swift in Sources */,
+				A301 /* HolovakUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,11 +262,11 @@
 /* Begin PBXTargetDependency section */
 		DEP01 = {
 			isa = PBXTargetDependency;
-			target = T001 /* ClipCut */;
+			target = T001 /* Holovak */;
 		};
 		DEP02 = {
 			isa = PBXTargetDependency;
-			target = T001 /* ClipCut */;
+			target = T001 /* Holovak */;
 		};
 /* End PBXTargetDependency section */
 
@@ -400,14 +400,14 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = ClipCut/Info.plist;
+				INFOPLIST_FILE = Holovak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.ClipCut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.Holovak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -426,14 +426,14 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = NO;
-				INFOPLIST_FILE = ClipCut/Info.plist;
+				INFOPLIST_FILE = Holovak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.ClipCut;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.Holovak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -449,11 +449,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.ClipCutTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.HolovakTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipCut.app/Contents/MacOS/ClipCut";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holovak.app/Contents/MacOS/Holovak";
 			};
 			name = Debug;
 		};
@@ -466,11 +466,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.ClipCutTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.HolovakTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClipCut.app/Contents/MacOS/ClipCut";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Holovak.app/Contents/MacOS/Holovak";
 			};
 			name = Release;
 		};
@@ -482,11 +482,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.ClipCutUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.HolovakUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = ClipCut;
+				TEST_TARGET_NAME = Holovak;
 			};
 			name = Debug;
 		};
@@ -498,18 +498,18 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.ClipCutUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.barseghyanartur.HolovakUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = ClipCut;
+				TEST_TARGET_NAME = Holovak;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		XC00 /* Build configuration list for PBXProject "ClipCut" */ = {
+		XC00 /* Build configuration list for PBXProject "Holovak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC00D /* Debug */,
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		XC01 /* Build configuration list for PBXNativeTarget "ClipCut" */ = {
+		XC01 /* Build configuration list for PBXNativeTarget "Holovak" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC01D /* Debug */,
@@ -527,7 +527,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		XC02 /* Build configuration list for PBXNativeTarget "ClipCutTests" */ = {
+		XC02 /* Build configuration list for PBXNativeTarget "HolovakTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC02D /* Debug */,
@@ -536,7 +536,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		XC03 /* Build configuration list for PBXNativeTarget "ClipCutUITests" */ = {
+		XC03 /* Build configuration list for PBXNativeTarget "HolovakUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BC03D /* Debug */,

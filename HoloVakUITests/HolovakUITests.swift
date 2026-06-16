@@ -1,6 +1,6 @@
 import XCTest
 
-final class ClipCutUITests: XCTestCase {
+final class HolovakUITests: XCTestCase {
 
     var app: XCUIApplication!
 
@@ -20,8 +20,8 @@ final class ClipCutUITests: XCTestCase {
         XCTAssertTrue(app.staticTexts["Drop a video file here"].exists)
     }
 
-    func testLaunch_showsClipCutTitle() {
-        XCTAssertTrue(app.staticTexts["ClipCut"].exists)
+    func testLaunch_showsHolovakTitle() {
+        XCTAssertTrue(app.staticTexts["Holovak"].exists)
     }
 
     func testLaunch_showsBrowseButton() {
@@ -29,7 +29,7 @@ final class ClipCutUITests: XCTestCase {
     }
 }
 
-final class ClipCutUITestsLaunchTests: XCTestCase {
+final class HolovakUITestsLaunchTests: XCTestCase {
 
     func testLaunchPerformance() throws {
         measure(metrics: [XCTApplicationLaunchMetric()]) {

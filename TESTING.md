@@ -1,4 +1,4 @@
-# Testing — ClipCut
+# Testing — Holovak
 
 ## Quick reference
 
@@ -7,9 +7,9 @@
 | `make test` | Unit tests + UI tests |
 | `make test-unit` | Unit tests only (faster, no UI launch) |
 
-## Unit tests — `ClipCutTests`
+## Unit tests — `HolovakTests`
 
-Located in `ClipCutTests/ClipCutTests.swift`. Split into two classes:
+Located in `HolovakTests/HolovakTests.swift`. Split into two classes:
 
 ### `SegmentTests`
 
@@ -49,11 +49,11 @@ when ffmpeg is not installed (CI-safe).
 | `testBuildArguments_outputIsLast` | Output path is the final argument |
 | `testBuildArguments_containsCRF0` | `-crf 0` present (lossless quality) |
 
-## UI tests — `ClipCutUITests`
+## UI tests — `HolovakUITests`
 
 | Test | What it checks |
 |---|---|
 | `testLaunch_showsDropZone` | "Drop a video file here" text visible on launch |
-| `testLaunch_showsClipCutTitle` | "ClipCut" title visible |
+| `testLaunch_showsHolovakTitle` | "Holovak" title visible |
 | `testLaunch_showsBrowseButton` | Browse button visible |
 | `testLaunchPerformance` | Launch time measurement |

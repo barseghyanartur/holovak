@@ -1,5 +1,5 @@
 import XCTest
-@testable import ClipCut
+@testable import Holovak
 
 // MARK: - SegmentTests
 
@@ -168,13 +168,13 @@ extension FFmpegError: Equatable {
     }
 }
 
-// MARK: - ClipCutViewModel segment selection tests
+// MARK: - HolovakViewModel segment selection tests
 
 @MainActor
-final class ClipCutViewModelSelectionTests: XCTestCase {
+final class HolovakViewModelSelectionTests: XCTestCase {
 
-    private func makeSUT(segmentCount: Int = 3) -> ClipCutViewModel {
-        let vm = ClipCutViewModel()
+    private func makeSUT(segmentCount: Int = 3) -> HolovakViewModel {
+        let vm = HolovakViewModel()
         vm.segments = (0..<segmentCount).map { _ in Segment() }
         return vm
     }
