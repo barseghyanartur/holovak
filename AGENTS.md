@@ -26,23 +26,23 @@ Key constraints that must never be violated:
 ## 2. Repository layout
 
 ```
-Holovak/
-    HolovakApp.swift          # @main entry point
+HoloVak/
+    HoloVakApp.swift          # @main entry point
     ContentView.swift         # Root SwiftUI view (drop zone + editor)
     SegmentRow.swift          # Per-segment row (timecode fields + delete)
     Segment.swift             # Value type: start/end timecodes + parsing
     FFmpegRunner.swift        # ffmpeg discovery, arg builder, Process runner
-    HolovakViewModel.swift    # ObservableObject: state + export orchestration
+    HoloVakViewModel.swift    # ObservableObject: state + export orchestration
     Info.plist                # Injects $(MARKETING_VERSION) as AppVersion
     Assets.xcassets/          # App icon
 
-HolovakTests/
-    HolovakTests.swift        # Unit tests for Segment and FFmpegRunner
+HoloVakTests/
+    HoloVakTests.swift        # Unit tests for Segment and FFmpegRunner
 
-HolovakUITests/
-    HolovakUITests.swift      # Basic launch + UI state assertions
+HoloVakUITests/
+    HoloVakUITests.swift      # Basic launch + UI state assertions
 
-Holovak.xcodeproj/            # Xcode project; do not hand-edit project.pbxproj
+HoloVak.xcodeproj/            # Xcode project; do not hand-edit project.pbxproj
 Makefile                      # Full build/test/release pipeline
 CHANGELOG.rst
 README.rst
@@ -57,7 +57,7 @@ TESTING.md
 
 ```
 User drops/opens file
-  └─ ContentView → HolovakViewModel.loadFile(_:)
+  └─ ContentView → HoloVakViewModel.loadFile(_:)
        ├─ ffprobe → duration displayed in file header
        └─ segments list reset to one blank row
 
@@ -66,7 +66,7 @@ User edits segments
        └─ Segment.isValid computed live (shows ✓ or ✗)
 
 User taps Export (⌘↩)
-  └─ HolovakViewModel.export()
+  └─ HoloVakViewModel.export()
        ├─ FFmpegRunner.buildArguments(...)  — pure, testable
        └─ FFmpegRunner.run(...)             — Process + Pipe, streams log
             └─ exportState → .done(url) or .failed(msg)
@@ -79,7 +79,7 @@ User taps Export (⌘↩)
 | `Segment` | `struct` | Timecode pair + `toSeconds` / `fromSeconds` / `isValid` |
 | `FFmpegRunner` | `enum` (namespace) | `ffmpegPath()`, `outputPath()`, `buildArguments()`, `run()` |
 | `FFmpegError` | `enum` | Typed errors surfaced in the UI |
-| `HolovakViewModel` | `@MainActor class` | All mutable state; orchestrates export |
+| `HoloVakViewModel` | `@MainActor class` | All mutable state; orchestrates export |
 | `ContentView` | `View` | Drop zone OR editor panel based on `vm.inputURL` |
 | `SegmentRow` | `View` | One row: index, start field, arrow, end field, valid badge, delete |
 
@@ -127,7 +127,7 @@ Any new API requiring 14+ must be wrapped in `if #available(macOS 14, *) {}`.
    fully unit-testable without a real file or ffmpeg installed.
 2. `Segment.isValid` is `false` when either timecode fails to parse or
    `end ≤ start`. The UI reflects this live with a ✓/✗ badge.
-3. `HolovakViewModel.canExport` requires `inputURL != nil` AND all segments
+3. `HoloVakViewModel.canExport` requires `inputURL != nil` AND all segments
    valid AND `exportState != .running`. The Export button is disabled otherwise.
 4. The output path is always `<input-stem>-edited.<ext>` in the same directory
    as the input. No user prompt — keep it simple.
@@ -140,7 +140,7 @@ Any new API requiring 14+ must be wrapped in `if #available(macOS 14, *) {}`.
 
 - **Swift 5**, SwiftUI-first, AppKit only where SwiftUI is insufficient.
 - No force-unwraps on values that can legitimately be absent. Use `guard let`.
-- `@MainActor` on `HolovakViewModel` — all UI updates happen on the main thread.
+- `@MainActor` on `HoloVakViewModel` — all UI updates happen on the main thread.
 - `FFmpegRunner` methods that touch the filesystem or spawn processes are
   clearly separated from `buildArguments`, which is pure and tested.
 - Comment style: `// TODO:` for known gaps, never silent omissions.
@@ -155,6 +155,6 @@ Any new API requiring 14+ must be wrapped in `if #available(macOS 14, *) {}`.
 - Do not raise the deployment target above 13.1 without updating README and
   CHANGELOG.
 - Do not bundle or download ffmpeg — the user must install it separately.
-- Do not hand-edit `Holovak.xcodeproj/project.pbxproj`; use Xcode or
+- Do not hand-edit `HoloVak.xcodeproj/project.pbxproj`; use Xcode or
   `xcodebuild` settings overrides.
 - Do not add outbound network calls.
