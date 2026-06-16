@@ -19,6 +19,7 @@
 #   make zip          Wrap .dmg in ZIP → Releases/dist/
 #   make checksum     Print + save SHA-256 → Releases/dist/
 #   make release      Full pipeline (archive → export → dmg → zip → checksum)
+#   make publish      Tag, push, and create GitHub release with DMG asset
 #   make version      Print current MARKETING_VERSION
 #   make bump V=0.2.0 Set a new version in the project file
 #   make clean        Remove all generated artefacts
@@ -75,7 +76,7 @@ endif
 # Phony targets
 # ---------------------------------------------------------------------------
 .PHONY: all build test test-unit archive export dmg checksum tap release \
-        version bump open clean help
+        publish version bump open clean help
 
 all: help
 
@@ -216,11 +217,24 @@ release: archive export dmg checksum tap
 	@echo "║             $(RELEASES_DIR)/tap/holovak@$(VERSION).rb"
 	@echo "╠══════════════════════════════════════════════════════╣"
 	@echo "║  Next steps:"
+	@echo "║  make publish   (tags, pushes, creates GitHub release)"
+	@echo "║  OR manually:"
 	@echo "║    1. git tag $(VERSION) && git push --tags"
 	@echo "║    2. Upload Holovak.dmg to the GitHub release"
 	@echo "║    3. Copy tap files to your Homebrew tap repo:"
 	@echo "║       cp Releases/tap/*.rb /path/to/homebrew-holovak-tap/Casks/"
 	@echo "╚══════════════════════════════════════════════════════╝"
+
+## publish: Tag, push, and create a GitHub release with the DMG asset
+publish:
+	@test -f "$(DMG_PATH)" || \
+	  (echo "No .dmg found at $(DMG_PATH). Run 'make release' first."; exit 1)
+	@git tag "$(VERSION)"
+	@git push origin $(VERSION)
+	gh release create "$(VERSION)" "$(DMG_PATH)" \
+	  --title "$(VERSION)" \
+	  --latest
+	@echo "→ GitHub release created: $(VERSION)"
 
 # ---------------------------------------------------------------------------
 # Utility
